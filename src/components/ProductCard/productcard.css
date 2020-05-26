@@ -1,0 +1,19 @@
+.card {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3px;
+  padding: 2px;
+  width: 300px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
