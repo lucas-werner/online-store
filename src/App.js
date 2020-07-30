@@ -5,12 +5,13 @@ import ProductDetails from './pages/ProductDetailsPage/ProductDetailsPage';
 import ShoppingCart from './pages/ShoppingCartPage/ShoppingCartPage';
 import Checkout from './pages/CheckoutPage';
 import NotFound from './pages/NotFoundPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
     <main>
-      <Router>
+      <Router basename="/online-store">
         <Switch>
           <Route exact path="/" component={ProductList} />
           <Route path="/products/:id" component={ProductDetails} />

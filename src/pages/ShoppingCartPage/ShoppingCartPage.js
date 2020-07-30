@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 import AddCartButton from '../../components/AddCartButton';
 import RemoveCartButton from '../../components/RemoveCartButton';
 import ShoppingCartSize from '../../components/ShoppingCartSize/ShoppingCartSize';
@@ -54,7 +55,7 @@ class ShoppingCart extends React.Component {
     return (
       <div key={id} className="flex_cart_container">
         <div className="align">
-          <button type="button" onClick={() => this.removeAllItems(id)}>X</button>
+          <Button type="button" onClick={() => this.removeAllItems(id)}>X</Button>
         </div>
         <div className="align, image_content">
           <img src={thumbnail} alt={`imagem de um ${title}`} />
@@ -76,9 +77,9 @@ class ShoppingCart extends React.Component {
     this.value = 'Finalizar compra';
     return (
       <Link to="/checkout">
-        <button className="checkout_button" type="button" data-testid="checkout-products">
+        <Button className="checkout_button" type="button" data-testid="checkout-products">
           Finalizar Compra
-        </button>
+        </Button>
       </Link>
     );
   }
